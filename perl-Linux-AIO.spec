@@ -10,7 +10,7 @@ Summary(pl):	Linux::AIO - linuksowe AIO zaimplementowane przy u¿yciu clone
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.3
 Release:	1
-License:	Unknown
+License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	e2f2b749d384d948e813fa2979ade315
