@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Linux
 %define	pnam	AIO
-Summary:	Linux::AIO - linux-specific aio implemented using clone
-#Summary(pl):	-
+Summary:	Linux::AIO - Linux-specific AIO implemented using clone
+Summary(pl):	Linux::AIO - linuksowe AIO zaimplementowane przy u¿yciu clone
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.3
 Release:	1
@@ -21,14 +21,14 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module implements asynchronous i/o using the means available to
-linux - clone. It does not hook into the POSIX aio_* functions because
-linux does not yet support these in the kernel (and even if, it would
+This module implements asynchronous I/O using the means available to
+Linux - clone. It does not hook into the POSIX aio_* functions because
+Linux does not yet support these in the kernel (and even if, it would
 only allow aio_read and write, not open and stat).
 
 Instead, in this module a number of (non-posix) threads are started
 that execute your read/writes and signal their completion. You don't
-need thread support in your libc or perl, and the threads created by
+need thread support in your libc or Perl, and the threads created by
 this module will not be visible to the pthreads library.
 
 NOTICE: the threads created by this module will automatically be
@@ -38,7 +38,23 @@ ever call min_parallel from the same thread that loaded this module.
 Although the module will work with threads, it is not reentrant, so
 use appropriate locking yourself.
 
-#%description -l pl
+%description -l pl
+Ten modu³ implementuje asynchroniczne I/O przy u¿yciu ¶rodka
+dostêpnego pod Linuksem - clone. Nie odwo³uje siê do funkcji POSIX
+aio_* poniewa¿ Linux jeszcze nie obs³uguje ich w j±drze (a nawet
+gdyby, to pozwoli³by tylko na aio_read i write, a nie open i stat).
+
+Zamiast tego w tym module uruchamiane jest wiele (nie-posiksowych)
+w±tków wykonuj±cych odczyty/zapisy i sygnalizuj±cych ich zakoñczenie.
+Nie jest wymagana obs³uga w±tków w libc czy Perlu, a tworzone w±tki
+nie s± widoczne dla biblioteki pthreads.
+
+UWAGA: w±tki stworzone przez ten modu³ bêd± automatycznie zabijane po
+zakoñczeniu w±tku wywo³uj±cego min_parallel. Trzeba upewniæ siê, ¿e
+wywo³ujemy min_parallel z tego samego w±tku, który wczyta³ ten modu³.
+
+Chocia¿ ten modu³ bêdzie dzia³a³ z w±tkami, nie jest wielowej¶ciowy
+(reentrant), wiêc odpowiednie blokady trzeba oprogramowaæ samemu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
