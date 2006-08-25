@@ -9,7 +9,7 @@ Summary:	Linux::AIO - Linux-specific AIO implemented using clone
 Summary(pl):	Linux::AIO - linuksowe AIO zaimplementowane przy u¿yciu clone
 Name:		perl-Linux-AIO
 Version:	1.9
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -18,6 +18,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://search.cpan.org/dist/Linux-AIO/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
