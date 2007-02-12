@@ -6,7 +6,7 @@
 %define		pdir	Linux
 %define		pnam	AIO
 Summary:	Linux::AIO - Linux-specific AIO implemented using clone
-Summary(pl):	Linux::AIO - linuksowe AIO zaimplementowane przy u¿yciu clone
+Summary(pl.UTF-8):   Linux::AIO - linuksowe AIO zaimplementowane przy uÅ¼yciu clone
 Name:		perl-Linux-AIO
 Version:	1.9
 Release:	2
@@ -39,23 +39,23 @@ ever call min_parallel from the same thread that loaded this module.
 Although the module will work with threads, it is not reentrant, so
 use appropriate locking yourself.
 
-%description -l pl
-Ten modu³ implementuje asynchroniczne I/O przy u¿yciu ¶rodka
-dostêpnego pod Linuksem - clone. Nie odwo³uje siê do funkcji POSIX
-aio_* poniewa¿ Linux jeszcze nie obs³uguje ich w j±drze (a nawet
-gdyby, to pozwoli³by tylko na aio_read i write, a nie open i stat).
+%description -l pl.UTF-8
+Ten moduÅ‚ implementuje asynchroniczne I/O przy uÅ¼yciu Å›rodka
+dostÄ™pnego pod Linuksem - clone. Nie odwoÅ‚uje siÄ™ do funkcji POSIX
+aio_* poniewaÅ¼ Linux jeszcze nie obsÅ‚uguje ich w jÄ…drze (a nawet
+gdyby, to pozwoliÅ‚by tylko na aio_read i write, a nie open i stat).
 
 Zamiast tego w tym module uruchamiane jest wiele (nie-posiksowych)
-w±tków wykonuj±cych odczyty/zapisy i sygnalizuj±cych ich zakoñczenie.
-Nie jest wymagana obs³uga w±tków w libc czy Perlu, a tworzone w±tki
-nie s± widoczne dla biblioteki pthreads.
+wÄ…tkÃ³w wykonujÄ…cych odczyty/zapisy i sygnalizujÄ…cych ich zakoÅ„czenie.
+Nie jest wymagana obsÅ‚uga wÄ…tkÃ³w w libc czy Perlu, a tworzone wÄ…tki
+nie sÄ… widoczne dla biblioteki pthreads.
 
-UWAGA: w±tki stworzone przez ten modu³ bêd± automatycznie zabijane po
-zakoñczeniu w±tku wywo³uj±cego min_parallel. Trzeba upewniæ siê, ¿e
-wywo³ujemy min_parallel z tego samego w±tku, który wczyta³ ten modu³.
+UWAGA: wÄ…tki stworzone przez ten moduÅ‚ bÄ™dÄ… automatycznie zabijane po
+zakoÅ„czeniu wÄ…tku wywoÅ‚ujÄ…cego min_parallel. Trzeba upewniÄ‡ siÄ™, Å¼e
+wywoÅ‚ujemy min_parallel z tego samego wÄ…tku, ktÃ³ry wczytaÅ‚ ten moduÅ‚.
 
-Chocia¿ ten modu³ bêdzie dzia³a³ z w±tkami, nie jest wielowej¶ciowy
-(reentrant), wiêc odpowiednie blokady trzeba oprogramowaæ samemu.
+ChociaÅ¼ ten moduÅ‚ bÄ™dzie dziaÅ‚aÅ‚ z wÄ…tkami, nie jest wielowejÅ›ciowy
+(reentrant), wiÄ™c odpowiednie blokady trzeba oprogramowaÄ‡ samemu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
