@@ -6,7 +6,7 @@
 %define		pdir	Linux
 %define		pnam	AIO
 Summary:	Linux::AIO - Linux-specific AIO implemented using clone
-Summary(pl.UTF-8):   Linux::AIO - linuksowe AIO zaimplementowane przy użyciu clone
+Summary(pl.UTF-8):	Linux::AIO - linuksowe AIO zaimplementowane przy użyciu clone
 Name:		perl-Linux-AIO
 Version:	1.9
 Release:	2
