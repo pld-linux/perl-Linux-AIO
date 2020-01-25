@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Linux
 %define		pnam	AIO
 Summary:	Linux::AIO - Linux-specific AIO implemented using clone
